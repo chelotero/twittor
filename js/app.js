@@ -1,6 +1,15 @@
+var url = window.location.href;  // esto obtiene todo el url
+var swLocation = "/twittor/sw.js";  //este es el path en donde se encuentra el SW en github
+//nos sirve para verificar donde esta el sw y poder activarlo
+
+
 
 if (navigator.serviceWorker){
-    navigator.serviceWorker.register('/sw.js');   //con esto le decimos a nuestra app que  vamos a instalar el service worker                                            // si es que no existe 
+
+    if ( url.includes( 'localhost' ) ){
+        swLocation = '/sw.js';
+    }
+    navigator.serviceWorker.register( swLocation );   //con esto le decimos a nuestra app que  vamos a instalar el service worker                                            // si es que no existe 
 }   
 
 // Referencias de jQuery

@@ -1,5 +1,4 @@
 // imports de las funciones
-
 importScripts('js/sw-utils.js');
 
 const STATIC_CACHE      = 'static-v2';
@@ -8,7 +7,9 @@ const INMUTABLE_CACHE   = 'inmutable-v1';
 
  //esto mi app shell que significa lo mas importante es decir lo que deberia estar crgado al instante
 const APP_SHELL  = [ 
-    '/',
+    
+   // para produccion  se debe comentar la linea de la raiz porque no me servira por el momento 
+    //  '/',
     '/index.html', 
     '/css/style.css', 
     '/img/favicon.ico', 
