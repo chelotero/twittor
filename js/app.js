@@ -2,8 +2,6 @@ var url = window.location.href;  // esto obtiene todo el url
 var swLocation = "/twittor/sw.js";  //este es el path en donde se encuentra el SW en github
 //nos sirve para verificar donde esta el sw y poder activarlo
 
-
-
 if (navigator.serviceWorker){
 
     if ( url.includes( 'localhost' ) ){

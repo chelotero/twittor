@@ -10,15 +10,15 @@ const APP_SHELL  = [
     
    // para produccion  se debe comentar la linea de la raiz porque no me servira por el momento 
     //  '/',
-    '/index.html', 
-    '/css/style.css', 
-    '/img/favicon.ico', 
-    '/img/avatars/spiderman.jpg', 
-    '/img/avatars/hulk.jpg', 
-    '/img/avatars/ironman.jpg', 
-    '/img/avatars/thor.jpg', 
-    '/img/avatars/wolverine.jpg',
-    '/js/app.js', 
+    'index.html', 
+    'css/style.css', 
+    'img/favicon.ico', 
+    'img/avatars/spiderman.jpg', 
+    'img/avatars/hulk.jpg', 
+    'img/avatars/ironman.jpg', 
+    'img/avatars/thor.jpg', 
+    'img/avatars/wolverine.jpg',
+    'js/app.js', 
     'js/sw-utils.js'
 ];
 
