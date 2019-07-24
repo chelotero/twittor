@@ -1,7 +1,7 @@
 // imports de las funciones
 importScripts('js/sw-utils.js');
 
-const STATIC_CACHE      = 'static-v2';
+const STATIC_CACHE      = 'static-v3';  //siempre subimos una version para que se haga una  nueva instalacion y reconozca los nuevos archivos
 const DYNAMIC_CACHE     = 'dynamic-v1';
 const INMUTABLE_CACHE   = 'inmutable-v1';    
 
