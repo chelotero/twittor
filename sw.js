@@ -1,8 +1,8 @@
 // imports de las funciones
 importScripts('js/sw-utils.js');
 
-const STATIC_CACHE      = 'static-v3';  //siempre subimos una version para que se haga una  nueva instalacion y reconozca los nuevos archivos
-const DYNAMIC_CACHE     = 'dynamic-v1';
+const STATIC_CACHE      = 'static-v4';  //siempre subimos una version para que se haga una  nueva instalacion y reconozca los nuevos archivos
+const DYNAMIC_CACHE     = 'dynamic-v2';  //para que me actualize la version de este  cache tambien
 const INMUTABLE_CACHE   = 'inmutable-v1';    
 
  //esto mi app shell que significa lo mas importante es decir lo que deberia estar crgado al instante
@@ -57,12 +57,18 @@ self.addEventListener('activate', e => {
      
     const respuesta = caches.keys().then( keys => {
 
-        keys.forEach( key => {
+        keys.forEach( key => { // esto es un arreglo de todas las promesas 
 
             // static-v4
             if (  key !== STATIC_CACHE && key.includes('static') ) {
                 return caches.delete(key);
             }
+
+             // dynamic-v2 con esto actualizo tambien el dinamico
+             if (  key !== DYNAMIC_CACHE && key.includes('dynamic') ) {
+                return caches.delete(key);
+            }
+
 
         });
 
